@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://90660045theone-crypto.github.io/123nightclub/sitemap.xml

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 123 NIGHT CLUB site build v6.5（班表上線：烘入 Google 試算表即時 CSV（gviz・改格即生效）＋CSV 解析引號感知修正；檔期空窗 ENDED 徽章：移除「試算表驅動」內部標籤與導語前綴、找到我們嵌入真 Google 地圖、頁尾（待補）移除；初戀返校日轉歷史檔期；扁平路徑；QR 過場順序對調：先年齡門、點「是」後播過場；已通過年齡門的掃碼者直接播、開場黑幕守衛僅此情況啟動；影片武裝即預載） (2026-08-24) — 班表定版「幾點到幾點」自由填寫制；URL 待烘入前為休眠 -->
+<!-- 123 NIGHT CLUB site build v6.5.2（頁尾社群區塊重整：FOLLOW US 小標＋六顆緊湊膠囊一排收齊、修 flex 縱向拉伸；Maps 移除（與找到我們導航重複）；班表上線：烘入 Google 試算表即時 CSV（gviz・改格即生效）＋CSV 解析引號感知修正；檔期空窗 ENDED 徽章：移除「試算表驅動」內部標籤與導語前綴、找到我們嵌入真 Google 地圖、頁尾（待補）移除；初戀返校日轉歷史檔期；扁平路徑；QR 過場順序對調：先年齡門、點「是」後播過場；已通過年齡門的掃碼者直接播、開場黑幕守衛僅此情況啟動；影片武裝即預載） (2026-08-24) — 班表定版「幾點到幾點」自由填寫制；URL 待烘入前為休眠 -->
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
@@ -711,6 +711,14 @@ html.introing #introVid{display:block;}
 @media (prefers-reduced-motion:reduce){ #introVid{display:none !important;} }
 
 .ev-live.ended{color:#B9ACD2; border-color:rgba(185,172,210,.4); background:rgba(185,172,210,.07);}
+.foot-grid{align-items:flex-start;}
+.soc-blk{display:flex; flex-direction:column; gap:10px; align-items:flex-end;}
+.soc-k{font-size:10px; letter-spacing:.34em; text-indent:.34em; color:var(--gold-l); opacity:.72; font-family:"Michroma",var(--sans);}
+.foot-grid .soc{flex-wrap:wrap; justify-content:flex-end; max-width:600px; gap:10px; align-items:center;}
+.foot-grid .soc a{padding:8px 16px; font-size:12px; letter-spacing:.05em; line-height:1; align-self:center;
+  transition:border-color .18s ease, color .18s ease, background .18s ease;}
+.foot-grid .soc a:hover{border-color:var(--gold); color:#fff; background:rgba(216,180,94,.07);}
+@media (max-width:680px){ .soc-blk{align-items:flex-start;} .foot-grid .soc{justify-content:flex-start;} }
 </style>
 </head>
 <body><script>try{var _s=location.search,_f=/[?&]intro=1/.test(_s),_q=/[?&]qr=1/.test(_s)||location.hash==='#qr',_n=false;try{_n=!!sessionStorage.getItem('introSeen');}catch(e){}var _g=false;try{var _t=+localStorage.getItem('gate18ok')||0;_g=(_t&&Date.now()-_t<2592000000)||!!sessionStorage.getItem('gate18ok');}catch(e){}if((_f||(_q&&!_n))&&_g)document.documentElement.classList.add('introing');}catch(e){}</script><div id="introQR" data-nots><div class="isky"></div><div class="istars"></div><div class="igrid"></div><div class="ihor"></div><img class="ilogo" alt="123 Night Club"><div class="iaddr">LINSEN N. RD. 123 &middot; B1 &middot; TAIPEI</div><button class="iskip" onclick="endIntro()">SKIP</button><div class="iflash"></div></div><div id="introVid" data-nots><video muted playsinline preload="none"></video><div class="iveil"></div><div class="ivband ivbt"></div><img class="ivlogo" alt="123 Night Club" style="opacity:0"><div class="ivband ivbb"><div class="ivaddr" style="opacity:0">LINSEN N. RD. 123 &middot; B1 &middot; TAIPEI</div></div><div class="ivtube ivlt"></div><div class="ivtube ivlb"></div><button class="ivskip">SKIP</button><div class="ivflash"></div><div class="ivtap">TAP TO START</div></div>
@@ -794,10 +802,16 @@ html.introing #introVid{display:block;}
         <div class="brand" style="margin-bottom:10px">123 <b>NIGHT CLUB</b></div>
         <div>台北市中山區林森北路 123 號 B1｜02-2531-8909</div>
       </div>
-      <div class="soc">
+      <div class="soc-blk" data-nots>
+        <div class="soc-k">FOLLOW US</div>
+        <div class="soc">
+        <a href="https://www.facebook.com/profile.php?id=61584786623133" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.instagram.com/123nightclub" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" onclick="return false">TikTok</a>
-        <a href="https://maps.app.goo.gl/CxgPyCXAeuJyfY827" target="_blank" rel="noopener">Google Maps</a>
+        <a href="https://www.threads.com/@123nightclub" target="_blank" rel="noopener">Threads</a>
+        <a href="https://www.tiktok.com/@123nightclub" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://xhslink.com/m/6aFvWduCmLX" target="_blank" rel="noopener" class="soc-x">小紅書</a>
+        <a href="https://www.youtube.com/@123nightclub" target="_blank" rel="noopener">YouTube</a>
+        </div>
       </div>
     </div>
     <div class="foot-legal">
@@ -1122,7 +1136,7 @@ _text: {
   '每週日至週四・23:00 前進場 男生八折／女生八折':'日〜木・23:00までのご入場で男女とも20％OFF',
   '滿額扭蛋抽獎':'ガチャ抽選',
   '單桌消費滿 5,000 即享一次扭蛋抽獎・活動只到 8/31':'1テーブル5,000以上のご利用でガチャ1回・8/31まで',
-  '▶ 看宣傳片':'▶ PVを見る','NOW ON・進行中':'NOW ON・開催中','ENDED・已結束':'ENDED・終了しました','目前沒有進行中的活動':'開催中のイベントはありません',
+  '▶ 看宣傳片':'▶ PVを見る','NOW ON・進行中':'NOW ON・開催中','ENDED・已結束':'ENDED・終了しました','小紅書':'RED','目前沒有進行中的活動':'開催中のイベントはありません',
   '下一檔請見「即將登場」':'次回は「NEXT UP」をご覧ください',
   '初戀返校日':'初恋 登校日','回到最心動的那一年':'いちばんときめいたあの頃へ',
   '123 GIRLS 全員學生制服登場，九天限定。把制服、初戀和那年沒說出口的話，一起帶回條通的地下室。':'123 GIRLS 全員が制服で登場、9日間限定。制服と初恋と、あの日言えなかった言葉を條通の地下へ。',
@@ -1244,7 +1258,7 @@ _text: {
   '每週日至週四・23:00 前進場 男生八折／女生八折':'Sun to Thu, enter before 23:00: 20% off for men and women',
   '滿額扭蛋抽獎':'Gachapon prize draw',
   '單桌消費滿 5,000 即享一次扭蛋抽獎・活動只到 8/31':'Spend 5,000 per table for one draw · until 8/31',
-  '▶ 看宣傳片':'▶ Watch the trailer','NOW ON・進行中':'NOW ON','ENDED・已結束':'ENDED','目前沒有進行中的活動':'No event running right now',
+  '▶ 看宣傳片':'▶ Watch the trailer','NOW ON・進行中':'NOW ON','ENDED・已結束':'ENDED','小紅書':'RED','目前沒有進行中的活動':'No event running right now',
   '下一檔請見「即將登場」':'See NEXT UP for what follows',
   '初戀返校日':'First Love, Back to School','回到最心動的那一年':'Back to the year that made your heart race',
   '123 GIRLS 全員學生制服登場，九天限定。把制服、初戀和那年沒說出口的話，一起帶回條通的地下室。':'All of 123 GIRLS in school uniform, nine nights only. Bring the uniform, the first crush and everything left unsaid down to the basement.',

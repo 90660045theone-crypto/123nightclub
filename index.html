@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 123 NIGHT CLUB site build v6.6（AIO/SEO：meta+OG+canonical+hreflang＋NightClub/FAQPage/Event JSON-LD；頁尾社群區塊重整：FOLLOW US 小標＋六顆緊湊膠囊一排收齊、修 flex 縱向拉伸；Maps 移除（與找到我們導航重複）；班表上線：烘入 Google 試算表即時 CSV（gviz・改格即生效）＋CSV 解析引號感知修正；檔期空窗 ENDED 徽章：移除「試算表驅動」內部標籤與導語前綴、找到我們嵌入真 Google 地圖、頁尾（待補）移除；初戀返校日轉歷史檔期；扁平路徑；QR 過場順序對調：先年齡門、點「是」後播過場；已通過年齡門的掃碼者直接播、開場黑幕守衛僅此情況啟動；影片武裝即預載） (2026-08-24) — 班表定版「幾點到幾點」自由填寫制；URL 待烘入前為休眠 -->
+<!-- 123 NIGHT CLUB site build v6.7（店內空間實景上架（8/25 攝）；AIO/SEO：meta+OG+canonical+hreflang＋NightClub/FAQPage/Event JSON-LD；頁尾社群區塊重整：FOLLOW US 小標＋六顆緊湊膠囊一排收齊、修 flex 縱向拉伸；Maps 移除（與找到我們導航重複）；班表上線：烘入 Google 試算表即時 CSV（gviz・改格即生效）＋CSV 解析引號感知修正；檔期空窗 ENDED 徽章：移除「試算表驅動」內部標籤與導語前綴、找到我們嵌入真 Google 地圖、頁尾（待補）移除；初戀返校日轉歷史檔期；扁平路徑；QR 過場順序對調：先年齡門、點「是」後播過場；已通過年齡門的掃碼者直接播、開場黑幕守衛僅此情況啟動；影片武裝即預載） (2026-08-24) — 班表定版「幾點到幾點」自由填寫制；URL 待烘入前為休眠 -->
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
@@ -731,6 +731,10 @@ html.introing #introVid{display:block;}
 .foot-grid{align-items:flex-start;}
 .soc-blk{display:flex; flex-direction:column; gap:10px; align-items:flex-end;}
 .soc-k{font-size:10px; letter-spacing:.34em; text-indent:.34em; color:var(--gold-l); opacity:.72; font-family:"Michroma",var(--sans);}
+.venue-grid .art.vph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+.venue-grid .art.vph::after{content:""; position:absolute; inset:auto 0 0 0; height:46%; z-index:1; pointer-events:none;
+  background:linear-gradient(180deg, transparent, rgba(8,4,14,.62));}
+.venue-grid .art.vph .lb{color:rgba(245,239,250,.92); text-shadow:0 1px 10px rgba(0,0,0,.65);}
 .foot-grid .soc{flex-wrap:wrap; justify-content:flex-end; max-width:600px; gap:10px; align-items:center;}
 .foot-grid .soc a{padding:8px 16px; font-size:12px; letter-spacing:.05em; line-height:1; align-self:center;
   transition:border-color .18s ease, color .18s ease, background .18s ease;}
@@ -874,13 +878,13 @@ html.introing #introVid{display:block;}
   <div class="wrap">
     <div class="kicker reveal">The Venue</div>
     <h2 class="sec-title reveal">店內<em>空間</em></h2>
-    <p class="sec-lead reveal">霓虹、光牆、互動舞台，實景照由 9 月前置拍攝日補齊。</p>
+    <p class="sec-lead reveal">霓虹、光牆、互動舞台，進場後看到的就是這個樣子。</p>
     <div class="venue-grid reveal">
-      <div class="art"><span class="lb">Entrance — 入口意象</span></div>
-      <div class="art"><span class="lb">Bar — 吧檯光牆</span></div>
-      <div class="art"><span class="lb">VIP — 包廂</span></div>
-      <div class="art"><span class="lb">Stage — 互動舞台</span></div>
-      <div class="art"><span class="lb">Lounge — 卡座區</span></div>
+      <div class="art vph"><img src="venue_hall.webp" alt="123 NIGHT CLUB 主場域實景：霓虹字標與現場" loading="lazy"><span class="lb">Main Hall — 主場域</span></div>
+      <div class="art vph"><img src="venue_bar.webp" alt="123 NIGHT CLUB 吧檯實景" loading="lazy"><span class="lb">Bar — 吧檯</span></div>
+      <div class="art vph"><img src="venue_dj.webp" alt="123 NIGHT CLUB DJ 台實景" loading="lazy"><span class="lb">DJ Booth — DJ 台</span></div>
+      <div class="art vph"><img src="venue_lounge.webp" alt="123 NIGHT CLUB 卡座區實景" loading="lazy"><span class="lb">Lounge — 卡座區</span></div>
+      <div class="art vph"><img src="venue_game.webp" alt="123 NIGHT CLUB 遊戲區實景" loading="lazy"><span class="lb">Game Corner — 遊戲區</span></div>
     </div>
   </div>
 </section>
@@ -1395,7 +1399,7 @@ _text: {
   '每週日至週四・23:00 前進場 男生八折／女生八折':'日〜木・23:00までのご入場で男女とも20％OFF',
   '滿額扭蛋抽獎':'ガチャ抽選',
   '單桌消費滿 5,000 即享一次扭蛋抽獎・活動只到 8/31':'1テーブル5,000以上のご利用でガチャ1回・8/31まで',
-  '▶ 看宣傳片':'▶ PVを見る','NOW ON・進行中':'NOW ON・開催中','ENDED・已結束':'ENDED・終了しました','小紅書':'RED','目前沒有進行中的活動':'開催中のイベントはありません',
+  '▶ 看宣傳片':'▶ PVを見る','NOW ON・進行中':'NOW ON・開催中','ENDED・已結束':'ENDED・終了しました','小紅書':'RED','加入會員':'会員登録','加入會員 ↗':'会員登録 ↗','目前沒有進行中的活動':'開催中のイベントはありません',
   '下一檔請見「即將登場」':'次回は「NEXT UP」をご覧ください',
   '初戀返校日':'初恋 登校日','回到最心動的那一年':'いちばんときめいたあの頃へ',
   '123 GIRLS 全員學生制服登場，九天限定。把制服、初戀和那年沒說出口的話，一起帶回條通的地下室。':'123 GIRLS 全員が制服で登場、9日間限定。制服と初恋と、あの日言えなかった言葉を條通の地下へ。',
@@ -1404,8 +1408,8 @@ _text: {
   '學生制服':'制服','九天限定':'9日間限定','全員新造型':'全員新衣装',
   '兔耳髮箍':'バニーカチューシャ','四天連假':'4連休',
   /* 店內空間 */
-  '霓虹、光牆、互動舞台，實景照由 9 月前置拍攝日補齊。':'ネオン、ライトウォール、インタラクティブステージ。実写は9月の撮影後に掲載します。',
-  'Entrance — 入口意象':'Entrance — エントランス','Bar — 吧檯光牆':'Bar — バーカウンター',
+  '霓虹、光牆、互動舞台，進場後看到的就是這個樣子。':'ネオン、ライトウォール、インタラクティブステージ。入場後に見える、そのままの姿です。',
+  'Main Hall — 主場域':'Main Hall — メインホール','Bar — 吧檯':'Bar — バーカウンター','DJ Booth — DJ 台':'DJ Booth — DJブース','Game Corner — 遊戲區':'Game Corner — ゲームコーナー',
   'VIP — 包廂':'VIP — 個室','Stage — 互動舞台':'Stage — ステージ','Lounge — 卡座區':'Lounge — ソファ席',
   /* 常見問題 */
   '第一次來？看完這段，進場零尷尬。':'初めての方へ。これを読めば安心してお越しいただけます。',
@@ -1517,7 +1521,7 @@ _text: {
   '每週日至週四・23:00 前進場 男生八折／女生八折':'Sun to Thu, enter before 23:00: 20% off for men and women',
   '滿額扭蛋抽獎':'Gachapon prize draw',
   '單桌消費滿 5,000 即享一次扭蛋抽獎・活動只到 8/31':'Spend 5,000 per table for one draw · until 8/31',
-  '▶ 看宣傳片':'▶ Watch the trailer','NOW ON・進行中':'NOW ON','ENDED・已結束':'ENDED','小紅書':'RED','目前沒有進行中的活動':'No event running right now',
+  '▶ 看宣傳片':'▶ Watch the trailer','NOW ON・進行中':'NOW ON','ENDED・已結束':'ENDED','小紅書':'RED','加入會員':'JOIN US','加入會員 ↗':'JOIN US ↗','目前沒有進行中的活動':'No event running right now',
   '下一檔請見「即將登場」':'See NEXT UP for what follows',
   '初戀返校日':'First Love, Back to School','回到最心動的那一年':'Back to the year that made your heart race',
   '123 GIRLS 全員學生制服登場，九天限定。把制服、初戀和那年沒說出口的話，一起帶回條通的地下室。':'All of 123 GIRLS in school uniform, nine nights only. Bring the uniform, the first crush and everything left unsaid down to the basement.',
@@ -1525,8 +1529,8 @@ _text: {
   '十一天連續檔期，收尾在中秋＋教師節四天連假・主題視覺製作中':'Eleven straight nights, finishing on the four-day Mid-Autumn weekend · key visual in production',
   '學生制服':'School uniform','九天限定':'Nine nights only','全員新造型':'All-new looks',
   '兔耳髮箍':'Bunny ears','四天連假':'Four-day weekend',
-  '霓虹、光牆、互動舞台，實景照由 9 月前置拍攝日補齊。':'Neon, light walls, interactive stage. Real photos land after the September shoot.',
-  'Entrance — 入口意象':'Entrance','Bar — 吧檯光牆':'Bar','VIP — 包廂':'VIP Room','Stage — 互動舞台':'Stage','Lounge — 卡座區':'Lounge',
+  '霓虹、光牆、互動舞台，進場後看到的就是這個樣子。':'Neon, light walls, an interactive stage. Exactly what you will see inside.',
+  'Main Hall — 主場域':'Main Hall','Bar — 吧檯':'Bar','DJ Booth — DJ 台':'DJ Booth','Lounge — 卡座區':'Lounge','Game Corner — 遊戲區':'Game Corner',
   '第一次來？看完這段，進場零尷尬。':'First time? Read this and walk in like a regular.',
   '入場方式':'Getting in',
   '年滿 18 歲、攜帶證件，入場採暢飲制（詳見消費方式）':'18+, bring ID. Entry includes free flow (see pricing)',

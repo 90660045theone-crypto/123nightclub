@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 123 NIGHT CLUB site build v6.8（班表顯示不壓時間：僅「今日出勤」不露上下班時段（8/25 店長裁定）；店內空間實景上架（8/25 攝）；AIO/SEO：meta+OG+canonical+hreflang＋NightClub/FAQPage/Event JSON-LD；頁尾社群區塊重整：FOLLOW US 小標＋六顆緊湊膠囊一排收齊、修 flex 縱向拉伸；Maps 移除（與找到我們導航重複）；班表上線：烘入 Google 試算表即時 CSV（gviz・改格即生效）＋CSV 解析引號感知修正；檔期空窗 ENDED 徽章：移除「試算表驅動」內部標籤與導語前綴、找到我們嵌入真 Google 地圖、頁尾（待補）移除；初戀返校日轉歷史檔期；扁平路徑；QR 過場順序對調：先年齡門、點「是」後播過場；已通過年齡門的掃碼者直接播、開場黑幕守衛僅此情況啟動；影片武裝即預載） (2026-08-24) — 班表定版「幾點到幾點」自由填寫制；URL 待烘入前為休眠 -->
+<!-- 123 NIGHT CLUB site build v6.10（月亮版KV上站：午夜兔子店主視覺接入 NEXT UP 圖卡＋9/18 起進行中大卡自動帶圖＋events 分享圖換 og_moon；九月檔期定名「午夜兔子店」：活動卡片＋Event JSON-LD＋中日英譯名全面換版；班表顯示不壓時間：僅「今日出勤」不露上下班時段（8/25 店長裁定）；店內空間實景上架（8/25 攝）；AIO/SEO：meta+OG+canonical+hreflang＋NightClub/FAQPage/Event JSON-LD；頁尾社群區塊重整：FOLLOW US 小標＋六顆緊湊膠囊一排收齊、修 flex 縱向拉伸；Maps 移除（與找到我們導航重複）；班表上線：烘入 Google 試算表即時 CSV（gviz・改格即生效）＋CSV 解析引號感知修正；檔期空窗 ENDED 徽章：移除「試算表驅動」內部標籤與導語前綴、找到我們嵌入真 Google 地圖、頁尾（待補）移除；初戀返校日轉歷史檔期；扁平路徑；QR 過場順序對調：先年齡門、點「是」後播過場；已通過年齡門的掃碼者直接播、開場黑幕守衛僅此情況啟動；影片武裝即預載） (2026-08-24) — 班表定版「幾點到幾點」自由填寫制；URL 待烘入前為休眠 -->
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
@@ -503,6 +503,12 @@ h1,h2,h3,h4{color:#F4EDFA;}
 .ev-next .nm{font-family:var(--serif-tc); font-size:20px; font-weight:800;}
 .ev-next .dt{font-family:var(--serif-en); font-size:13px; letter-spacing:.24em; color:var(--gold-l);}
 .ev-next .r{font-size:13px; color:var(--dim);}
+.ev-next.haskv{border-style:solid; justify-content:flex-start;}
+.ev-next.haskv .nkv{width:148px; height:148px; flex:0 0 148px; border-radius:14px; object-fit:cover;
+  cursor:zoom-in; border:1px solid var(--line2); box-shadow:0 10px 30px rgba(0,0,0,.35); display:block;}
+.ev-next.haskv .tx{flex:1; min-width:200px;}
+.ev-next.haskv .tx .r{margin-top:8px;}
+@media (max-width:560px){ .ev-next.haskv .nkv{width:100%; height:190px; flex:0 0 100%;} }
 
 /* ---- 歷史檔期卡片牆 ---- */
 .arch-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(235px,1fr)); gap:22px;}
@@ -1081,8 +1087,8 @@ _text: {
   '下一檔請見「即將登場」':'次回は「NEXT UP」をご覧ください',
   '初戀返校日':'初恋 登校日','回到最心動的那一年':'いちばんときめいたあの頃へ',
   '123 GIRLS 全員學生制服登場，九天限定。把制服、初戀和那年沒說出口的話，一起帶回條通的地下室。':'123 GIRLS 全員が制服で登場、9日間限定。制服と初恋と、あの日言えなかった言葉を條通の地下へ。',
-  '中秋檔期・兔女郎':'中秋イベント・バニーガール',
-  '十一天連續檔期，收尾在中秋＋教師節四天連假・主題視覺製作中':'11日間連続開催、中秋節＋教師節の4連休でフィナーレ・メインビジュアル制作中',
+  '午夜兔子店':'真夜中のバニーショップ','中秋兔女郎檔期':'中秋バニーガール・シーズン',
+  '林森北路 B1，一間只在午夜營業的店：兔子店員進駐十一夜，收尾在中秋＋教師節四天連假':'林森北路B1、真夜中にだけ開く店。バニー店員が11夜限定で勤務、中秋節＋教師節の4連休でフィナーレ',
   '學生制服':'制服','九天限定':'9日間限定','全員新造型':'全員新衣装',
   '兔耳髮箍':'バニーカチューシャ','四天連假':'4連休',
   /* 店內空間 */
@@ -1203,8 +1209,8 @@ _text: {
   '下一檔請見「即將登場」':'See NEXT UP for what follows',
   '初戀返校日':'First Love, Back to School','回到最心動的那一年':'Back to the year that made your heart race',
   '123 GIRLS 全員學生制服登場，九天限定。把制服、初戀和那年沒說出口的話，一起帶回條通的地下室。':'All of 123 GIRLS in school uniform, nine nights only. Bring the uniform, the first crush and everything left unsaid down to the basement.',
-  '中秋檔期・兔女郎':'Mid-Autumn · Bunny Girls',
-  '十一天連續檔期，收尾在中秋＋教師節四天連假・主題視覺製作中':'Eleven straight nights, finishing on the four-day Mid-Autumn weekend · key visual in production',
+  '午夜兔子店':'Midnight Bunny Shop','中秋兔女郎檔期':'Mid-Autumn Bunny Girls Season',
+  '林森北路 B1，一間只在午夜營業的店：兔子店員進駐十一夜，收尾在中秋＋教師節四天連假':'A basement shop on Linsen North that only opens at midnight: bunny staff on duty for eleven nights, finishing on the four-day Mid-Autumn weekend',
   '學生制服':'School uniform','九天限定':'Nine nights only','全員新造型':'All-new looks',
   '兔耳髮箍':'Bunny ears','四天連假':'Four-day weekend',
   '霓虹、光牆、互動舞台，進場後看到的就是這個樣子。':'Neon, light walls, an interactive stage. Exactly what you will see inside.',

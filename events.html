@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<!-- 123 NIGHT CLUB site build v6.21（0908 換膚不閃：品牌版與月亮版兩套背景都內嵌、<head> 先依日期掛 class，開頁第一格就是當月主視覺，不再閃舊圖；名單拿掉小凡、小喵（沒有這兩位），123 GIRLS 共 12 位）／v6.20（公關照片換站：NEMO、RUBY、VIVIAN、YUKI、小N、小幽、小羊、小閔、小雨、表妹、貝貝、軍軍）／0904 店長核稿六項：常見問題「互動主持人」改「公關」、「現場主持」拿掉；包場建議提前改一個月；包廂低消改「週日至週四 5,000 抵 5 位入場費／週五、週六 10,000 抵 10 位入場費（不含暢飲）」（首頁卡＋酒單卡＋明細列＋描述，中日英）；VIP 會員三階制度卡拿掉；月光兔派對燈箱三人示意海報下架、改放月亮版 KV；123 GIRLS 名單補 6 位（小閒、小羊、YUKI、小凡、軍軍、小喵）先掛「照片準備中」卡，班表名字比對改不分大小寫）／v6.17（0831 依 0828 店長裁定活動抓兩個月：扭蛋與第二件半價日期全改 9/1–10/31（中日英）＋半價海報換 10/31 新版；平台遷移：全站絕對網址（canonical/hreflang/og/JSON-LD/sitemap）改指 https://123nightclub.github.io/（品牌根網址，AIO 實體強化，零成本方案）；集結令海報換用戶更新版（版面重排版）；五張文宣到齊：促銷區擴為四卡＝限定時段／滿額扭蛋抽獎（9/1–9/30・單點滿5,000抽一次・獎項氣泡酒/大摩12年/SHOT盤）／酒品全品項第二件半價（9/1–9/30）／123 GIRLS 全員集結令，全部用戶定稿海報；檔期視覺自動換膚：內建 SKIN_SCHED 排程，9/1–9/30 訪客端自動切月亮版背景（hero 桌機/手機＋三分頁頁首＝scene_moon.webp/scene_moon_m.webp 扁平檔），10/1 起自動退回品牌版，後續月份加排程列＋傳圖即可；0827 三張定稿海報上站：促銷區①「限定時段入場優惠」換新機制版（男生門票八折／女生門票七折＋享全時段無限暢飲）②「123 GIRLS 全員集結令」替換已過期扭蛋卡（原活動至8/31）；月光兔派對活動卡點開燈箱＝主檔期公告海報（兔女郎真人版）；檔期改名「月光兔派對」＋slogan（8/26 店長定名）；月亮版KV上站：檔期主視覺接入 NEXT UP 圖卡＋9/18 起進行中大卡自動帶圖＋events 分享圖換 og_moon；九月九月檔期定名：活動卡片＋Event JSON-LD＋中日英譯名全面換版；班表顯示不壓時間：僅「今日出勤」不露上下班時段（8/25 店長裁定）；店內空間實景上架（8/25 攝）；AIO/SEO：meta+OG+canonical+hreflang＋NightClub/FAQPage/Event JSON-LD；頁尾社群區塊重整：FOLLOW US 小標＋六顆緊湊膠囊一排收齊、修 flex 縱向拉伸；Maps 移除（與找到我們導航重複）；班表上線：烘入 Google 試算表即時 CSV（gviz・改格即生效）＋CSV 解析引號感知修正；檔期空窗 ENDED 徽章：移除「試算表驅動」內部標籤與導語前綴、找到我們嵌入真 Google 地圖、頁尾（待補）移除；初戀返校日轉歷史檔期；扁平路徑；QR 過場順序對調：先年齡門、點「是」後播過場；已通過年齡門的掃碼者直接播、開場黑幕守衛僅此情況啟動；影片武裝即預載） (2026-08-24) — 班表定版「幾點到幾點」自由填寫制；URL 待烘入前為休眠 -->
+<!-- 123 NIGHT CLUB site build v6.22（0908 換膚再加固：建置時就把當月那套背景寫成預設、不靠 JS；換膚判斷腳本移到 <head> 最前面（字型 CSS 之前），不會被外部樣式卡住；頁面快取 10 分鐘內仍可能看到舊版）／v6.21（0908 換膚不閃：品牌版與月亮版兩套背景都內嵌、<head> 先依日期掛 class，開頁第一格就是當月主視覺，不再閃舊圖；名單拿掉小凡、小喵（沒有這兩位），123 GIRLS 共 12 位）／v6.20（公關照片換站：NEMO、RUBY、VIVIAN、YUKI、小N、小幽、小羊、小閔、小雨、表妹、貝貝、軍軍）／0904 店長核稿六項：常見問題「互動主持人」改「公關」、「現場主持」拿掉；包場建議提前改一個月；包廂低消改「週日至週四 5,000 抵 5 位入場費／週五、週六 10,000 抵 10 位入場費（不含暢飲）」（首頁卡＋酒單卡＋明細列＋描述，中日英）；VIP 會員三階制度卡拿掉；月光兔派對燈箱三人示意海報下架、改放月亮版 KV；123 GIRLS 名單補 6 位（小閒、小羊、YUKI、小凡、軍軍、小喵）先掛「照片準備中」卡，班表名字比對改不分大小寫）／v6.17（0831 依 0828 店長裁定活動抓兩個月：扭蛋與第二件半價日期全改 9/1–10/31（中日英）＋半價海報換 10/31 新版；平台遷移：全站絕對網址（canonical/hreflang/og/JSON-LD/sitemap）改指 https://123nightclub.github.io/（品牌根網址，AIO 實體強化，零成本方案）；集結令海報換用戶更新版（版面重排版）；五張文宣到齊：促銷區擴為四卡＝限定時段／滿額扭蛋抽獎（9/1–9/30・單點滿5,000抽一次・獎項氣泡酒/大摩12年/SHOT盤）／酒品全品項第二件半價（9/1–9/30）／123 GIRLS 全員集結令，全部用戶定稿海報；檔期視覺自動換膚：內建 SKIN_SCHED 排程，9/1–9/30 訪客端自動切月亮版背景（hero 桌機/手機＋三分頁頁首＝scene_moon.webp/scene_moon_m.webp 扁平檔），10/1 起自動退回品牌版，後續月份加排程列＋傳圖即可；0827 三張定稿海報上站：促銷區①「限定時段入場優惠」換新機制版（男生門票八折／女生門票七折＋享全時段無限暢飲）②「123 GIRLS 全員集結令」替換已過期扭蛋卡（原活動至8/31）；月光兔派對活動卡點開燈箱＝主檔期公告海報（兔女郎真人版）；檔期改名「月光兔派對」＋slogan（8/26 店長定名）；月亮版KV上站：檔期主視覺接入 NEXT UP 圖卡＋9/18 起進行中大卡自動帶圖＋events 分享圖換 og_moon；九月九月檔期定名：活動卡片＋Event JSON-LD＋中日英譯名全面換版；班表顯示不壓時間：僅「今日出勤」不露上下班時段（8/25 店長裁定）；店內空間實景上架（8/25 攝）；AIO/SEO：meta+OG+canonical+hreflang＋NightClub/FAQPage/Event JSON-LD；頁尾社群區塊重整：FOLLOW US 小標＋六顆緊湊膠囊一排收齊、修 flex 縱向拉伸；Maps 移除（與找到我們導航重複）；班表上線：烘入 Google 試算表即時 CSV（gviz・改格即生效）＋CSV 解析引號感知修正；檔期空窗 ENDED 徽章：移除「試算表驅動」內部標籤與導語前綴、找到我們嵌入真 Google 地圖、頁尾（待補）移除；初戀返校日轉歷史檔期；扁平路徑；QR 過場順序對調：先年齡門、點「是」後播過場；已通過年齡門的掃碼者直接播、開場黑幕守衛僅此情況啟動；影片武裝即預載） (2026-08-24) — 班表定版「幾點到幾點」自由填寫制；URL 待烘入前為休眠 -->
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
+<script>var SKIN_SCHED=[{"from": "2026-09-01", "to": "2026-09-30", "skin": "moon"}];(function(){try{function d2(n){return(n<10?"0":"")+n}var n=new Date(),t=n.getFullYear()+"-"+d2(n.getMonth()+1)+"-"+d2(n.getDate()),k="brand";for(var i=0;i<SKIN_SCHED.length;i++){var s=SKIN_SCHED[i];if(t>=s.from&&t<=s.to){k=s.skin;break}}document.documentElement.className+=" skin-"+k}catch(e){}})();</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>當月活動與歷史｜123 NIGHT CLUB</title>
 <meta name="description" content="123 NIGHT CLUB 檔期活動：月光兔派對（中秋兔女郎檔期）2026/9/18–9/28 十一夜限定，以及歷屆主題檔期回顧。台北林森北路互動派對夜店。">
@@ -431,18 +433,28 @@ h1,h2,h3,h4{color:#F4EDFA;}
   .hero-stage .sc{display:none;} .hero-stage .sc.m{display:block; object-position:center top;}
   .hero-stage .lk{width:72%; top:35.8%;}
 }
-/* ---- v6.21 換膚不閃：兩套圖都內嵌，<head> 先依日期掛 html.skin-moon，開頁第一格就是對的圖 ---- */
-.hero-stage .sc.moon{display:none;}
+/* ---- v6.22 換膚不閃：兩套圖都內嵌；建置時就把「當月該顯示的那套」寫成預設（不靠 JS），<head> 最前面再依日期掛 html.skin-xxx 覆蓋（跨月自動切） ---- */
+/* 預設（建置日 2026-09-08 判定＝moon；不靠 JS） */
+.hero-stage .sc.brand{display:none;}
+.hero-stage .sc.moon{display:block;}
+.hero-stage .sc.moon.m{display:none;}
+@media (max-width:820px){ .hero-stage .sc.moon{display:none;} .hero-stage .sc.moon.m{display:block; object-position:center top;} }
+.page-head .bg img.brand{display:none;}
+.page-head .bg img.moon{display:block;}
+/* JS 依日期覆蓋 */
+html.skin-brand .hero-stage .sc.moon{display:none;}
+html.skin-brand .hero-stage .sc.brand{display:block;}
+html.skin-brand .hero-stage .sc.brand.m{display:none;}
+@media (max-width:820px){ html.skin-brand .hero-stage .sc.brand{display:none;} html.skin-brand .hero-stage .sc.brand.m{display:block; object-position:center top;} }
+html.skin-brand .page-head .bg img.moon{display:none;}
+html.skin-brand .page-head .bg img.brand{display:block;}
 html.skin-moon .hero-stage .sc.brand{display:none;}
 html.skin-moon .hero-stage .sc.moon{display:block;}
 html.skin-moon .hero-stage .sc.moon.m{display:none;}
-@media (max-width:820px){
-  html.skin-moon .hero-stage .sc.moon{display:none;}
-  html.skin-moon .hero-stage .sc.moon.m{display:block; object-position:center top;}
-}
-.page-head .bg img.moon{display:none;}
+@media (max-width:820px){ html.skin-moon .hero-stage .sc.moon{display:none;} html.skin-moon .hero-stage .sc.moon.m{display:block; object-position:center top;} }
 html.skin-moon .page-head .bg img.brand{display:none;}
 html.skin-moon .page-head .bg img.moon{display:block;}
+
 /* ---- PPT 完稿圖卡（主打星／全員） ---- */
 .star-card.has-img,.g-card.has-img{aspect-ratio:3/4; cursor:zoom-in; background:#170D26;}
 .star-card.has-img.pend,.g-card.has-img.pend{cursor:default;}
@@ -761,10 +773,6 @@ html.introing #introVid{display:block;}
 .foot-grid .soc a:hover{border-color:var(--gold); color:#fff; background:rgba(216,180,94,.07);}
 @media (max-width:680px){ .soc-blk{align-items:flex-start;} .foot-grid .soc{justify-content:flex-start;} }
 </style>
-<script>
-var SKIN_SCHED=[{from:"2026-09-01",to:"2026-09-30",cls:"skin-moon"}];
-(function(){try{function d2(n){return(n<10?"0":"")+n}var n=new Date(),t=n.getFullYear()+"-"+d2(n.getMonth()+1)+"-"+d2(n.getDate());for(var i=0;i<SKIN_SCHED.length;i++){var s=SKIN_SCHED[i];if(t>=s.from&&t<=s.to){document.documentElement.className+=" "+s.cls;break}}}catch(e){}})();
-</script>
 </head>
 <body><script>try{var _s=location.search,_f=/[?&]intro=1/.test(_s),_q=/[?&]qr=1/.test(_s)||location.hash==='#qr',_n=false;try{_n=!!sessionStorage.getItem('introSeen');}catch(e){}var _g=false;try{var _t=+localStorage.getItem('gate18ok')||0;_g=(_t&&Date.now()-_t<2592000000)||!!sessionStorage.getItem('gate18ok');}catch(e){}if((_f||(_q&&!_n))&&_g)document.documentElement.classList.add('introing');}catch(e){}</script><div id="introQR" data-nots><div class="isky"></div><div class="istars"></div><div class="igrid"></div><div class="ihor"></div><img class="ilogo" alt="123 Night Club"><div class="iaddr">LINSEN N. RD. 123 &middot; B1 &middot; TAIPEI</div><button class="iskip" onclick="endIntro()">SKIP</button><div class="iflash"></div></div><div id="introVid" data-nots><video muted playsinline preload="none"></video><div class="iveil"></div><div class="ivband ivbt"></div><img class="ivlogo" alt="123 Night Club" style="opacity:0"><div class="ivband ivbb"><div class="ivaddr" style="opacity:0">LINSEN N. RD. 123 &middot; B1 &middot; TAIPEI</div></div><div class="ivtube ivlt"></div><div class="ivtube ivlb"></div><button class="ivskip">SKIP</button><div class="ivflash"></div><div class="ivtap">TAP TO START</div></div>
 
